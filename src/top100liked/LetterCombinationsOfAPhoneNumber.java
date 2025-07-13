@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Letter_Combinations_of_a_Phone_Number {
+public class LetterCombinationsOfAPhoneNumber {
     /*
         17. Letter Combinations of a Phone Number
         Execution explanation at the bottom
@@ -13,8 +13,7 @@ public class Letter_Combinations_of_a_Phone_Number {
 
     public List<String> letterCombinations(String digits) {
         List<String> res = new ArrayList<>();
-
-        if (digits == null || digits.length() == 0) {
+        if (digits == null || digits.isEmpty()) {
             return res;
         }
 
@@ -29,7 +28,6 @@ public class Letter_Combinations_of_a_Phone_Number {
         map.put('9', "wxyz");
 
         mix(0, digits, res, map, new StringBuilder());
-
         return res;
     }
 
@@ -49,6 +47,7 @@ public class Letter_Combinations_of_a_Phone_Number {
 
     /*
         -------------------------------
+
         digits -> 23
 
         idx -> 0 --- 2 -> [a, b, c]
